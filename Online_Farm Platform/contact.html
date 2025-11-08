@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact — AgroLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><span class="leaf">🌾</span> AgroLink</div>
+            <nav class="nav"><a href="index.html">Home</a><a href="product.html">Products</a><a href="contact.html"
+                    aria-current="page">Contact</a></nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top:18px; max-width:880px">
+        <div class="grid" style="grid-template-columns:1fr 320px; gap:1rem">
+            <section class="form-card">
+                <h2>Contact support</h2>
+                <p class="meta">Fill the form and our team will respond within 24 hours.</p>
+                <form action="/contact/submit/" method="post" class="form-grid">
+                    <!-- add csrf token later -->
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button class="btn" type="submit">Send message</button>
+                </form>
+            </section>
+
+            <aside>
+                <div class="card-small">
+                    <h4>Office</h4>
+                    <p class="kv">Kwara — Ilorin</p>
+                    <p class="kv">yusuf@gmail.com</p>
+                    <p class="kv">+234 805 519 1870</p>
+                </div>
+
+                <div style="margin-top:12px" class="card-small">
+                    <h4>Support hours</h4>
+                    <p class="kv">Mon — Fri: 8:00 — 17:00</p>
+                    <p class="kv">We aim to respond within 24 hours.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">&copy;2025 AgroLink</div>
+    </footer>
+</body>
+
+</html>

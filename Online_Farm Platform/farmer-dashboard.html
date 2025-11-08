@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard — AgroLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><span class="leaf">🌾</span> AgroLink</div>
+            <nav class="nav"><a href="index.html">Home</a><a href="product.html">Products</a><a
+                    href="add-product.html">Add Product</a><a href="profile.html">Profile</a></nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top:18px">
+        <div class="grid-2">
+            <section>
+                <div class="profile-row card-small">
+                    <img src="static/images/farmer-1.jpg" alt="avatar" class="avatar">
+                    <div>
+                        <div style="font-weight:800">Amina Yusuf</div>
+                        <div class="kv">Tomato farmer • Kano</div>
+                        <div class="kv">Member since 2021</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="form-card">
+                    <h3>Your listings</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fresh Tomatoes</td>
+                                <td>₦3,000</td>
+                                <td>12</td>
+                                <td><strong>Active</strong></td>
+                                <td><a href="product-detail.html">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Cherry Tomatoes</td>
+                                <td>₦4,000</td>
+                                <td>6</td>
+                                <td><strong>Pending</strong></td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top:12px"><a class="btn" href="add-product.html">Add new product</a></div>
+                </div>
+
+                <div style="margin-top:12px" class="form-card">
+                    <h3>Orders</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Buyer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#2345</td>
+                                <td>Mary</td>
+                                <td>₦6,000</td>
+                                <td>Paid</td>
+                            </tr>
+                            <tr>
+                                <td>#2249</td>
+                                <td>Kitchen Co.</td>
+                                <td>₦24,000</td>
+                                <td>Awaiting pickup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a class="btn secondary" href="orders.html" style="margin-top:8px; display:inline-block">View all
+                        orders</a>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card-small">
+                    <h4>Account Safety</h4>
+                    <div style="margin-top:.6rem">
+                        <div class="security">
+                            <div style="font-size:1.3rem">🔒</div>
+                            <div>
+                                <div style="font-weight:700">Secure your account</div>
+                                <div class="kv">Enable two-step verification and add a verified bank account for
+                                    payouts.</div>
+                            </div>
+                        </div>
+
+                        <ul style="margin-top:10px; padding-left:18px">
+                            <li class="kv">Email verified: <strong>yes</strong></li>
+                            <li class="kv">Phone verified: <strong>yes</strong></li>
+                            <li class="kv">Bank account linked: <strong>no</strong> — <a href="#">Add bank</a></li>
+                        </ul>
+
+                        <div style="margin-top:10px">
+                            <a class="btn" href="#">Enable 2FA</a>
+                            <a class="btn secondary" href="#">Identity verification</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px" class="card-small">
+                    <h4>Subscription</h4>
+                    <p class="kv">Current plan: <strong>Pro (₦3,500/mo)</strong></p>
+                    <a class="btn" href="subscribe.html">Manage plan</a>
+                </div>
+
+                <div style="margin-top:12px" class="card-small">
+                    <h4>Quick actions</h4>
+                    <a class="btn" href="add-product.html" style="display:block; margin-bottom:8px">Add product</a>
+                    <a class="btn secondary" href="products.html" style="display:block">Browse marketplace</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">&copy;2025 AgroLink</div>
+    </footer>
+</body>
+
+</html>
