@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subscribe — AgroLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo"><span class="leaf">🌾</span> AgroLink</div>
+      <nav class="nav"><a href="index.html">Home</a><a href="products.html">Products</a><a href="subscribe.html"
+          aria-current="page">Subscribe</a></nav>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top:18px">
+    <h2>Choose a plan</h2>
+    <div class="plan-grid" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:12px">
+      <div class="plan form-card" style="width:280px">
+        <h3>Basic</h3>
+        <p class="meta">₦1,000 / month</p>
+        <ul class="meta" style="padding-left:18px">
+          <li>List up to 5 products</li>
+          <li>Email support</li>
+        </ul>
+        <form action="/payments/subscribe/" method="post" style="margin-top:8px">
+          <!-- add csrf token in Django -->
+          <input type="hidden" name="plan" value="basic">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="plan form-card" style="width:320px; border:2px solid var(--green)">
+        <h3>Pro</h3>
+        <p class="meta">₦3,500 / month</p>
+        <ul class="meta" style="padding-left:18px">
+          <li>Unlimited listings</li>
+          <li>Priority placement</li>
+          <li>Verified badge</li>
+        </ul>
+        <form action="/payments/subscribe/" method="post">
+          <input type="hidden" name="plan" value="pro">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">&copy;2025 AgroLink</div>
+  </footer>
+</body>
+
+</html>

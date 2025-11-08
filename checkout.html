@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Checkout — AgroLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><span class="leaf">🌾</span> AgroLink</div>
+            <nav class="nav"><a href="index.html">Home</a><a href="products.html">Products</a></nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top:18px">
+        <div class="grid-2">
+            <section>
+                <h2>Checkout</h2>
+                <div class="form-card">
+                    <h4>Order details</h4>
+                    <div style="display:flex; justify-content:space-between; margin-top:.6rem">
+                        <div>Fresh Roma Tomatoes ×1</div>
+                        <div style="font-weight:800">₦3,000</div>
+                    </div>
+
+                    <hr style="margin:12px 0">
+
+                    <h4>Choose payment method</h4>
+
+                    <form action="/payments/initialize/" method="post" style="margin-top:8px">
+                        <!-- Add {% csrf_token %} when connecting Django -->
+                        <!-- radio toggles -->
+                        <div class="pay-methods">
+                            <div class="pay-method">
+                                <input id="pay_card" type="radio" name="pay_method" value="card" checked>
+                                <label class="pay-label" for="pay_card">Card (Visa, MasterCard)</label>
+                            </div>
+
+                            <div class="pay-method">
+                                <input id="pay_ussd" type="radio" name="pay_method" value="ussd">
+                                <label class="pay-label" for="pay_ussd">USSD (instant bank transfer)</label>
+                            </div>
+                        </div>
+
+                        <div class="pay-contents">
+                            <!-- Card section -->
+                            <div id="card_section" class="pay-section">
+                                <div style="display:grid; gap:.6rem">
+                                    <label for="card_name">Name on card</label>
+                                    <input id="card_name" name="card_name" type="text" required>
+
+                                    <label for="card_no">Card number</label>
+                                    <input id="card_no" name="card_no" type="text" inputmode="numeric"
+                                        placeholder="4242 4242 4242 4242" required>
+
+                                    <div style="display:flex; gap:.6rem">
+                                        <div style="flex:1">
+                                            <label for="exp">Expiry</label>
+                                            <input id="exp" name="exp" type="text" placeholder="MM/YY" required>
+                                        </div>
+                                        <div style="width:120px">
+                                            <label for="cvc">CVC</label>
+                                            <input id="cvc" name="cvc" type="text" placeholder="123" required>
+                                        </div>
+                                    </div>
+
+                                    <label for="email_pay">Email (receipt)</label>
+                                    <input id="email_pay" name="email" type="email" placeholder="email@domain.com"
+                                        required>
+
+                                    <button class="btn" type="submit">Pay ₦3,000</button>
+                                </div>
+                            </div>
+
+                            <!-- USSD section -->
+                            <div id="ussd_section" class="pay-section">
+                                <div style="display:grid; gap:.6rem">
+                                    <p class="meta">Select your bank and dial the code shown to complete payment.</p>
+                                    <label for="bank">Bank</label>
+                                    <select id="bank" name="bank" required>
+                                        <option value="access">Access Bank</option>
+                                        <option value="gtb">GTBank</option>
+                                        <option value="zenith">Zenith Bank</option>
+                                        <option value="uba">UBA</option>
+                                    </select>
+
+                                    <label for="phone_ussd">Phone number</label>
+                                    <input id="phone_ussd" name="phone" type="text" placeholder="+234..." required>
+
+                                    <p class="meta">Instruction: dial the displayed USSD code on your phone (e.g.
+                                        *737*...#) to complete payment. After payment, return here to confirm.</p>
+
+                                    <button class="btn" type="submit">I paid via USSD</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="meta" style="margin-top:12px">Payments are processed securely. We do not store raw card
+                        details in our servers.</p>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card-small">
+                    <h4>Help</h4>
+                    <p class="kv">If you have payment trouble, contact support at <strong>support@agrolink.ng</strong>
+                        or use the live phone support number displayed in your account.</p>
+                </div>
+
+                <div style="margin-top:12px" class="card-small">
+                    <h4>Secure checkout</h4>
+                    <div class="security" style="margin-top:8px">
+                        <div style="font-size:1.2rem">🔒</div>
+                        <div>
+                            <div style="font-weight:700">Payments secured</div>
+                            <div class="kv">PCI-compliant gateway will be used (Paystack/Flutterwave)</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">&copy;2025 AgroLink</div>
+    </footer>
+</body>
+
+</html>

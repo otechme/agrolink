@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Products — AgroLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo"><span class="leaf">🌾</span> AgroLink</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" aria-current="page">Products</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="margin:20px 0">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap">
+        <h2>All Products</h2>
+        <form class="form-card" style="display:flex; gap:.5rem; align-items:center" action="#" method="get">
+          <input type="text" name="q" placeholder="Search product or farmer" style="padding:.45rem .6rem; border-radius:8px; border:1px solid #eee">
+          <select name="region" style="padding:.45rem .6rem; border-radius:8px; border:1px solid #eee">
+            <option value="">All regions</option>
+            <option>South West</option>
+            <option>North West</option>
+            <option>South East</option>
+          </select>
+          <button class="btn" type="submit">Filter</button>
+        </form>
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <!-- Example product cards — replace with dynamic content -->
+        <div class="card">
+          <img src="static/images/tomatoes.jpg" alt="Tomatoes">
+          <div class="card-body">
+            <div class="card-title">Fresh Roma Tomatoes</div>
+            <div class="card-meta">By: Amina Yusuf • Kano</div>
+            <div class="card-price">₦3,000 / Basket</div>
+            <div class="card-actions">
+              <a class="btn" href="product-details.html">View</a>
+              <a class="btn secondary" href="farmer-dashboard.html">Contact farmer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/images/yam.jpg" alt="Yam">
+          <div class="card-body">
+            <div class="card-title">Organic White Yam</div>
+            <div class="card-meta">By: Emeka Nwosu • Enugu</div>
+            <div class="card-price">₦6,500 / Bag</div>
+            <div class="card-actions">
+              <a class="btn" href="product-details.html">View</a>
+              <a class="btn secondary" href="farmer-dashboard.html">Contact farmer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="static/images/maize.jpg" alt="Maize">
+          <div class="card-body">
+            <div class="card-title">Premium Maize (Dried)</div>
+            <div class="card-meta">By: Olabisi • Ibadan</div>
+            <div class="card-price">₦14,000 / Bag</div>
+            <div class="card-actions">
+              <a class="btn" href="product-details.html">View</a>
+              <a class="btn secondary" href="farmer-dashboard.html">Contact farmer</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">&copy;2025 AgroLink Nigeria</div></footer>
+</body>
+</html>
